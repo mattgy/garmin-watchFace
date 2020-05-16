@@ -217,9 +217,9 @@ class helper {
 	function getSteps(){
 		if(shortFormat){
 			if(debug){
-				return "99999stps";
+				return "99999s";
 			}
-			return Lang.format("$1$$2$",[ActivityMonitor.getInfo().steps,"stps"]);
+			return Lang.format("$1$$2$",[ActivityMonitor.getInfo().steps,"s"]);
 		}
 	
 		if(debug){
@@ -401,9 +401,9 @@ class helper {
 		switch(whatToSHow){
 			case 1:
 				var addDay = bonusDayInTop(whatToShowAtTop());
-				for(var day=0;day<daysForward;day++){
-		        	drawWeekDay2(dc,x,y+(stepY*day),startday+day+addDay,font);
-		        }
+				//for(var day=0;day<daysForward;day++){
+		        	drawWeekDay2(dc,x,y+(stepY*1),startday+1+addDay,font);
+		        //}
 				break;
 			case 2:// deprecated, old shows connection to phone
 			case 3:
