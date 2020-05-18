@@ -60,11 +60,12 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		uiH.drawBluetoothConnectionSmall(dc,135,152);
 	}
 	
+	// includes vivoActiv 4S
 	function draw_fenix3(dc){
         var topRight=uiH.whatToShowAtRight();
         
         uiH.drawTop(dc,110,5);
-        uiH.drawTopRight(topRight,dc,118,28,20,0,3);
+        uiH.drawTopRight(topRight,dc,118,28,20,0,uiH.fontSmall());
       	uiH.drawHours(dc,35,-15,45,-10,uiH.fontHuge45());
     	uiH.drawMinutes(dc,130,35,45,-10,uiH.fontHuge45());
 		uiH.drawBottomLeft(dc,85,150,19,uiH.fontSmall());
@@ -75,7 +76,7 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
         var topRight=uiH.whatToShowAtRight();
         
         uiH.drawTop(dc,110,8);
-        uiH.drawTopRight(topRight,dc,115,25,17,0,3);
+        uiH.drawTopRight(topRight,dc,115,25,17,0,uiH.fontSmall());
       	uiH.drawHours(dc,35,-20,45,-10,uiH.fontHuge45());
     	uiH.drawMinutes(dc,121,30,45,-10,uiH.fontHuge45());
 		uiH.drawBottomLeft(dc,93,136,17,uiH.fontSmall());

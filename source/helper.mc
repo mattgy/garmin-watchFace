@@ -52,7 +52,8 @@ class helper {
 	}
 	
 	function fontSmall(){
-		return fontSmall_(Application.getApp().getProperty("Font"));
+		//return fontSmall_(Application.getApp().getProperty("Font"));
+		return fontSmall_(2);
 	}
 	
 	function fontIcons(){
@@ -217,9 +218,9 @@ class helper {
 	function getSteps(){
 		if(shortFormat){
 			if(debug){
-				return "99999s";
+				return "99999";
 			}
-			return Lang.format("$1$$2$",[ActivityMonitor.getInfo().steps,"s"]);
+			return Lang.format("$1$$2$",[ActivityMonitor.getInfo().steps,""]);
 		}
 	
 		if(debug){
@@ -402,7 +403,8 @@ class helper {
 			case 1:
 				var addDay = bonusDayInTop(whatToShowAtTop());
 				//for(var day=0;day<daysForward;day++){
-		        	drawWeekDay2(dc,x,y+(stepY*1),startday+1+addDay,font);
+				var day = 0;
+		        	drawWeekDay2(dc,x,y+(stepY*1),startday+day+addDay,font);
 		        //}
 				break;
 			case 2:// deprecated, old shows connection to phone
