@@ -84,15 +84,17 @@ class phoneBatteryIQView extends WatchUi.WatchFace {
 		uiH.drawBluetoothConnectionSmall(dc,199,108);
 	}
 	
+	// includes forerunner 945
 	function draw_fr245_fenix5x(dc) {
 		var topCenter=uiH.whatToShowAtTop();
 		var topRight=uiH.whatToShowAtRight();
 
         uiH.drawTopFA(topCenter,dc,120,5,uiH.fontSmall(),Graphics.TEXT_JUSTIFY_CENTER);
-        uiH.drawTopRight(topRight,dc,125,25,20,0,3);
-      	uiH.drawHours(dc,40,-40,45,-20,uiH.fontHuge245());
-    	uiH.drawMinutes(dc,145,20,45,-20,uiH.fontHuge245());
-		uiH.drawBottomLeft(dc,108,152,20,uiH.fontSmall());
+        //uiH.drawTopRight(topRight,dc,125,25,20,0,3);
+        uiH.drawTopRight(topRight,dc,145,25,20,0,uiH.fontSmall());
+      	uiH.drawHours(dc,45,-45,45,-20,uiH.fontHuge245());
+    	uiH.drawMinutes(dc,150,10,45,-20,uiH.fontHuge245());
+		uiH.drawBottomLeft(dc,95,165,20,uiH.fontSmall());
 		
 		uiH.drawBluetoothConnection(dc,135,84);
 	}
